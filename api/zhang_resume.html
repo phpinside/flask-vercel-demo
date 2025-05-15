@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张三丰的个人简历</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        
+        header .job-title {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info span i {
+            margin-right: 5px;
+        }
+        
+        /* 内容样式 */
+        main {
+            padding: 25px;
+        }
+        
+        section {
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 12px;
+        }
+        
+        /* 技能样式 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .skill-item {
+            background-color: #ecf0f1;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* 工作经历样式 */
+        .job {
+            margin-bottom: 20px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            align-items: baseline;
+        }
+        
+        .job-title-company {
+            font-weight: bold;
+            color: #444;
+            font-size: 1.1rem;
+        }
+        
+        .job-date {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .job-description {
+            margin-left: 20px;
+        }
+        
+        .job-description li {
+            margin-bottom: 5px;
+        }
+        
+        /* 项目经验样式 */
+        .project {
+            margin-bottom: 20px;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            align-items: baseline;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #444;
+            font-size: 1.1rem;
+        }
+        
+        .project-date {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .project-tech {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            margin-left: 20px;
+        }
+        
+        .project-description li {
+            margin-bottom: 5px;
+        }
+        
+        /* 教育和证书样式 */
+        .education, .certificate {
+            margin-bottom: 12px;
+        }
+        
+        .education-header, .certificate-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .education-degree {
+            font-weight: bold;
+        }
+        
+        .education-date, .certificate-date {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* 自我评价样式 */
+        .self-evaluation li {
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .job-header, .project-header, .education-header, .certificate-item {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>张三丰</h1>
+            <div class="job-title">前端开发工程师</div>
+            <div class="contact-info">
+                <span><i>📱</i> 138-1234-5678</span>
+                <span><i>✉️</i> zhangsanfeng@example.com</span>
+                <span><i>📍</i> 上海市浦东新区</span>
+                <span><i>🔗</i> github.com/zhangsanfeng</span>
+                <span><i>📝</i> blog.zhangsanfeng.com</span>
+            </div>
+        </header>
+        
+        <main>
+            <section>
+                <h2>个人概述</h2>
+                <p>拥有5年前端开发经验，精通HTML、CSS、JavaScript，熟悉React、Vue.js等主流框架，具备良好的编码习惯和团队协作能力。专注于构建高性能、用户体验优化的Web应用，熟练处理跨浏览器兼容性和响应式设计。</p>
+            </section>
+            
+            <section>
+                <h2>技能总结</h2>
+                <div class="skill-category">
+                    <h3>前端技术</h3>
+                    <div class="skills">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript (ES6+)</span>
+                        <span class="skill-item">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>框架与库</h3>
+                    <div class="skills">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Vue.js</span>
+                        <span class="skill-item">Redux</span>
+                        <span class="skill-item">Axios</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>工具与平台</h3>
+                    <div class="skills">
+                        <span class="skill-item">Webpack</span>
+                        <span class="skill-item">Vite</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">npm/yarn</span>
+                        <span class="skill-item">Docker</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>UI/UX</h3>
+                    <div class="skills">
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">Ant Design</span>
+                        <span class="skill-item">Material-UI</span>
+                        <span class="skill-item">Figma</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>其他</h3>
+                    <div class="skills">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">RESTful API</span>
+                        <span class="skill-item">GraphQL</span>
+                        <span class="skill-item">Web性能优化</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>工作经历</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title-company">高级前端开发工程师 | 上海科技公司</span>
+                        <span class="job-date">2022.06 - 至今</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>负责公司核心产品的前端架构设计与开发，基于React + TypeScript构建高性能单页应用（SPA）。</li>
+                        <li>主导移动端H5页面开发，优化响应式布局，页面加载速度提升30%。</li>
+                        <li>与后端团队协作，设计并实现RESTful API接口，提升数据交互效率。</li>
+                        <li>使用Webpack优化打包流程，减少30%打包时间，提升开发效率。</li>
+                        <li>参与敏捷开发，主导代码审查，确保代码质量和一致性。</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title-company">前端开发工程师 | 广州创新科技有限公司</span>
+                        <span class="job-date">2020.03 - 2022.05</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>使用Vue.js开发企业级Web应用，完成10+功能模块的开发与维护。</li>
+                        <li>引入Tailwind CSS优化样式开发流程，减少20%样式代码量。</li>
+                        <li>开发并维护公司内部组件库，提升团队复用率约40%。</li>
+                        <li>优化前端性能，通过懒加载和代码分割将页面渲染时间缩短25%。</li>
+                        <li>参与需求分析与UI设计，配合设计师完成高保真原型到代码的转化。</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title-company">初级前端开发工程师 | 北京某互联网公司</span>
+                        <span class="job-date">2019.05 - 2020.02</span>
+                    </div>
+                    <ul class="job-description">
+                        <li>负责公司官网和营销页面的开发，基于HTML/CSS/JavaScript实现跨浏览器兼容。</li>
+                        <li>使用jQuery和Bootstrap快速迭代页面功能，完成5个项目上线。</li>
+                        <li>学习并实践React框架，参与公司新项目的初期开发。</li>
+                        <li>编写技术文档，协助团队进行前端代码规范化。</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>项目经验</h2>
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-title">电商平台前端开发 | 上海科技公司</span>
+                        <span class="project-date">2023.01 - 2023.12</span>
+                    </div>
+                    <div class="project-tech">技术栈：React, Redux, TypeScript, Ant Design, Axios</div>
+                    <ul class="project-description">
+                        <li>开发商品搜索、购物车、订单管理等核心模块，支持多语言切换。</li>
+                        <li>优化前端性能，首屏加载时间从3s降低到1.5s。</li>
+                        <li>引入单元测试（Jest），覆盖率达80%，提升代码稳定性。</li>
+                    </ul>
+                </div>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <span class="project-title">在线教育平台 | 广州创新科技有限公司</span>
+                        <span class="project-date">2021.06 - 2022.03</span>
+                    </div>
+                    <div class="project-tech">技术栈：Vue.js, Vuex, Tailwind CSS, WebSocket</div>
+                    <ul class="project-description">
+                        <li>实现实时课堂互动功能，支持直播、弹幕和文件共享。</li>
+                        <li>设计响应式布局，适配PC、平板、手机多端设备。</li>
+                        <li>集成第三方支付接口（微信、支付宝），确保支付流程安全稳定。</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <h2>教育背景</h2>
+                <div class="education">
+                    <div class="education-header">
+                        <span class="education-degree">计算机科学与技术 本科 | 上海交通大学</span>
+                        <span class="education-date">2015.09 - 2019.06</span>
+                    </div>
+                    <p>主修课程：数据结构、算法设计、Web开发基础、数据库原理</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>证书与荣誉</h2>
+                <div class="certificate">
+                    <div class="certificate-item">
+                        <span>前端开发专业证书 | 某某在线教育平台</span>
+                        <span class="certificate-date">2020</span>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <div class="certificate-item">
+                        <span>优秀员工奖 | 广州创新科技有限公司</span>
+                        <span class="certificate-date">2021</span>
+                    </div>
+                </div>
+                <div class="certificate">
+                    <div class="certificate-item">
+                        <span>英语CET-6</span>
+                        <span class="certificate-date">2018</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>自我评价</h2>
+                <ul class="self-evaluation">
+                    <li>热爱前端开发，对新技术保持好奇心，乐于学习和分享。</li>
+                    <li>具备良好的沟通能力和团队协作精神，能够快速适应不同项目需求。</li>
+                    <li>注重代码质量，追求优雅、高效的解决方案。</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

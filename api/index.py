@@ -13,8 +13,10 @@ async def test():
     now = datetime.now()
     return "现在时间"+ now.strftime("%Y-%m-%d %H:%M:%S")
 
-@app.get('/test2')
-async def test2():
-    return "test2"
+
+# 返回 张三丰的个人简历
+@app.get('/zhang_resume')
+async def zhang_resume():
+    return open('api/zhang_resume.html', 'r').read()
 
 
