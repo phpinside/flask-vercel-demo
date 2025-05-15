@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from datetime import datetime
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
@@ -17,6 +18,6 @@ async def test():
 # 返回 张三丰的个人简历
 @app.get('/zhang_resume')
 async def zhang_resume():
-    return open('api/zhang_resume.html', 'r').read()
+    return HTMLResponse(content=open('api/zhang_resume.html', 'r').read())
 
 
